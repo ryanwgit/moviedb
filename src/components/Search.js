@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
-function Search ({ handleInput }) {
+function Search({ handleInput, search }) {
   return (
-    <section className="searchbox-wrap">
-      <input type="text" placeholder="Know any good movies?" className="searchBox" onChange={handleInput}/>
+    <section className="searchBox-wrap">
+      <input
+        type="text"
+        placeholder="Search for a movie..."
+        className="searchBox"
+        onChange={handleInput}
+        onKeyPress={search}
+      />
     </section>
-  )
+  );
 }
 
-export default Search
+export default Search;

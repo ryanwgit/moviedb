@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #223343;
+  background-color: #222;
 }
 
 header {
@@ -14,9 +14,11 @@ header {
 
 header h1 {
   color: #FFF;
-  font-size: 48px;
+  font-size: 88px;
   font-weight: 500;
   text-align: center;
+  color: #DB202C;
+  font-family: 'Bebas Neue', cursive;
 }
 
 main {
@@ -45,5 +47,105 @@ section {
 }
 
 .searchBox:focus {
-  box-shadow: 0px 0px 8px 3px #4484C4;
+  box-shadow: 0px 0px 8px 3px #DB202C;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.results .result {
+  width: 33%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.results .result img {
+  display: block;
+  width: 100%;
+}
+
+.results .result h3 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #DB202C;
+  flex: 1 1 100%;
+}
+
+.results .result:hover h3 {
+  background-color: #FFF;
+  color: #DB202C;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow-y: scroll;
+}
+
+.popup .content {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  color: #FFF;
+}
+
+.popup .content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.popup .content h2 span {
+  font-size: 20px;
+  font-weight: 300;
+}
+.popup .content .rating {
+  font-size: 20px;
+}
+
+.popup .content .plot {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 30px;
+}
+
+.popup .content .plot img {
+  flex: 1 1 50%;
+  max-width: 300px;
+  padding: 0px 15px;
+}
+
+.popup .content .plot p {
+  flex: 1 1 50%;
+  padd: 15px;
+}
+
+.popup .content .close {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #DB202C;
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+}
+
+.popup .content .close:hover {
+  background-color: #FFF;
+  color: #DB202C;
 }
